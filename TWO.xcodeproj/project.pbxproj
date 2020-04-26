@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513E4E9D1A1616EAEFFCEC96 /* Pods_TWO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */; };
 		967153A4245357DE00739A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967153A3245357DE00739A45 /* AppDelegate.swift */; };
 		967153A6245357DE00739A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967153A5245357DE00739A45 /* ViewController.swift */; };
 		967153A9245357DE00739A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967153A7245357DE00739A45 /* Main.storyboard */; };
@@ -15,9 +16,12 @@
 		96A9EEDE2454BF06000212AA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */; };
 		96A9EEDF2454BF06000212AA /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDC2454BF06000212AA /* Lato-Light.ttf */; };
 		96A9EEE02454BF06000212AA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */; };
+		96A9EEE82456053C000212AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEE72456053C000212AA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59FC4B089DF0B8BC65956B27 /* Pods-TWO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWO.release.xcconfig"; path = "Target Support Files/Pods-TWO/Pods-TWO.release.xcconfig"; sourceTree = "<group>"; };
+		8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		967153A0245357DE00739A45 /* TWO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		967153A3245357DE00739A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		967153A5245357DE00739A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +32,8 @@
 		96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		96A9EEDC2454BF06000212AA /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		96A9EEE72456053C000212AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E6542D69D2E456B980A4FE12 /* Pods-TWO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWO.debug.xcconfig"; path = "Target Support Files/Pods-TWO/Pods-TWO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513E4E9D1A1616EAEFFCEC96 /* Pods_TWO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,8 @@
 			children = (
 				967153A2245357DE00739A45 /* TWO */,
 				967153A1245357DE00739A45 /* Products */,
+				D71D1473BB0702564B84E4CD /* Pods */,
+				A8E07F94F6B752E457E1E47A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,8 +78,27 @@
 				967153AA245357E100739A45 /* Assets.xcassets */,
 				967153AC245357E100739A45 /* LaunchScreen.storyboard */,
 				967153AF245357E100739A45 /* Info.plist */,
+				96A9EEE72456053C000212AA /* GoogleService-Info.plist */,
 			);
 			path = TWO;
+			sourceTree = "<group>";
+		};
+		A8E07F94F6B752E457E1E47A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D71D1473BB0702564B84E4CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6542D69D2E456B980A4FE12 /* Pods-TWO.debug.xcconfig */,
+				59FC4B089DF0B8BC65956B27 /* Pods-TWO.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +108,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 967153B2245357E100739A45 /* Build configuration list for PBXNativeTarget "TWO" */;
 			buildPhases = (
+				ECEB397A85D2704A415112E1 /* [CP] Check Pods Manifest.lock */,
 				9671539C245357DE00739A45 /* Sources */,
 				9671539D245357DE00739A45 /* Frameworks */,
 				9671539E245357DE00739A45 /* Resources */,
+				D330AB32D4E82122B96F6EC0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,10 +167,53 @@
 				967153AB245357E100739A45 /* Assets.xcassets in Resources */,
 				967153A9245357DE00739A45 /* Main.storyboard in Resources */,
 				96A9EEDE2454BF06000212AA /* Lato-Bold.ttf in Resources */,
+				96A9EEE82456053C000212AA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D330AB32D4E82122B96F6EC0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWO/Pods-TWO-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TWO/Pods-TWO-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TWO/Pods-TWO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECEB397A85D2704A415112E1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TWO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9671539C245357DE00739A45 /* Sources */ = {
@@ -290,6 +363,7 @@
 		};
 		967153B3245357E100739A45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6542D69D2E456B980A4FE12 /* Pods-TWO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -308,6 +382,7 @@
 		};
 		967153B4245357E100739A45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59FC4B089DF0B8BC65956B27 /* Pods-TWO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
