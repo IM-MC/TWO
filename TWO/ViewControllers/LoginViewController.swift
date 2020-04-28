@@ -23,14 +23,35 @@ class LoginViewController: UIViewController {
         return textfield
     }()
     
+    let passwordField: UITextField = {
+        let textfield = UITextField()
+        textfield.placeholder = "Password"
+        textfield.textColor = .white
+        textfield.textAlignment = .center
+        textfield.autocapitalizationType = .none
+        return textfield
+    }()
+    
     let loginButton: UIButton = {
         let button = UIButton()
         button.layer.cornerRadius = 26
-        button.backgroundColor = UIColor.init(red: 1, green: 173/255, blue: 99/255, alpha: 1)
+        button.backgroundColor = Colors.appPrimaryColor
         button.setTitle("Login", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Lato-Bold", size: 20)
+        button.setTitleColor(Colors.appBackgroundColor, for: .normal)
+        button.titleLabel?.font = Font.Button.big
         button.addTarget(self, action: #selector(onLoginButtonPress), for: .touchUpInside)
+        return button
+    }()
+    
+    let signUpButton: UIButton = {
+        let button = UIButton()
+        button.layer.cornerRadius = 26
+        button.layer.borderWidth = 1
+        button.layer.borderColor = Colors.appPrimaryColor.cgColor
+        button.setTitle("Sign Up", for: .normal)
+        button.setTitleColor(Colors.appPrimaryColor, for: .normal)
+        button.titleLabel?.font = Font.Button.big
+        button.addTarget(self, action: #selector(onSignUpButtonPress), for: .touchUpInside)
         return button
     }()
     
@@ -45,7 +66,7 @@ class LoginViewController: UIViewController {
         let password = "tester"
         Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
             if err != nil {
-                print(err)
+                print(err ?? "Error signing in")
             } else {
                 self.navigationController?.pushViewController(ViewController(), animated: true)
                 
@@ -55,6 +76,10 @@ class LoginViewController: UIViewController {
                 UserDefaults.standard.synchronize()
             }
         }
+    }
+    
+    @objc func onSignUpButtonPress(sender: UIButton) {
+        
     }
 
     /*

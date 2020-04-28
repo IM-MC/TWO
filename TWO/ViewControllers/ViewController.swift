@@ -19,18 +19,6 @@ class ViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(red: 26/255, green: 26/255, blue: 26/255, alpha: 100)
         
-        let currentlyLabel = UILabel(frame: CGRect.zero)
-        currentlyLabel.textColor = .white
-        currentlyLabel.textAlignment = .center
-        currentlyLabel.text = "currently:"
-        currentlyLabel.font = UIFont(name: "Lato-Bold", size: 21)
-        currentlyLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(currentlyLabel)
-
-        NSLayoutConstraint.activate([
-            currentlyLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
-            currentlyLabel.centerYAnchor.constraint(equalTo: self.view.topAnchor, constant: 60)
-        ])
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +39,22 @@ class ViewController: UIViewController {
     
     func setUser(_ user: User?) {
         self.user = user
-        print(self.user?.uid)
+        self.setupView()
+    }
+    
+    func setupView() {
+        if let uid = self.user?.uid {
+            let fastView = FastingView(uid: uid)
+            
+            self.view.addSubview(fastView)
+            
+            fastView.translatesAutoresizingMaskIntoConstraints = false
+            fastView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+            fastView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+        } else {
+            return // Error
+        }
+        
     }
 }
 

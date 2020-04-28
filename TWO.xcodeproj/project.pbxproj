@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		513E4E9D1A1616EAEFFCEC96 /* Pods_TWO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */; };
 		964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC22457AD94000C3A48 /* NavViewController.swift */; };
+		964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */; };
+		964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC724589FC4000C3A48 /* FastingView.swift */; };
+		964F8ECB2458BA9F000C3A48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8ECA2458BA9F000C3A48 /* Constants.swift */; };
 		965F90ED24563952003AEE89 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F90EC24563952003AEE89 /* SignUpViewController.swift */; };
 		965F90F024563BDC003AEE89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F90EF24563BDC003AEE89 /* LoginViewController.swift */; };
 		967153A4245357DE00739A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967153A3245357DE00739A45 /* AppDelegate.swift */; };
@@ -20,7 +23,7 @@
 		96A9EEDF2454BF06000212AA /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDC2454BF06000212AA /* Lato-Light.ttf */; };
 		96A9EEE02454BF06000212AA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */; };
 		96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FC24576E2D00A29464 /* Utilities.swift */; };
-		96CDF7002457817000A29464 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FF2457817000A29464 /* LoginView.swift */; };
+		96CDF7002457817000A29464 /* LoginViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FF2457817000A29464 /* LoginViewConstraints.swift */; };
 		96CDF7022457834800A29464 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CDF7012457834800A29464 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		59FC4B089DF0B8BC65956B27 /* Pods-TWO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWO.release.xcconfig"; path = "Target Support Files/Pods-TWO/Pods-TWO.release.xcconfig"; sourceTree = "<group>"; };
 		8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		964F8EC22457AD94000C3A48 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
+		964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewConstraints.swift; sourceTree = "<group>"; };
+		964F8EC724589FC4000C3A48 /* FastingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingView.swift; sourceTree = "<group>"; };
+		964F8ECA2458BA9F000C3A48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		965F90EC24563952003AEE89 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		965F90EF24563BDC003AEE89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		967153A0245357DE00739A45 /* TWO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,7 +47,7 @@
 		96A9EEDC2454BF06000212AA /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		96CDF6FC24576E2D00A29464 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		96CDF6FF2457817000A29464 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		96CDF6FF2457817000A29464 /* LoginViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewConstraints.swift; sourceTree = "<group>"; };
 		96CDF7012457834800A29464 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E6542D69D2E456B980A4FE12 /* Pods-TWO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWO.debug.xcconfig"; path = "Target Support Files/Pods-TWO/Pods-TWO.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +64,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		964F8EC624589FA6000C3A48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				964F8EC724589FC4000C3A48 /* FastingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		964F8EC92458BA91000C3A48 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				964F8ECA2458BA9F000C3A48 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		965F90EE2456395A003AEE89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,9 +112,11 @@
 		967153A2245357DE00739A45 /* TWO */ = {
 			isa = PBXGroup;
 			children = (
+				964F8EC92458BA91000C3A48 /* Constants */,
 				96CDF6FB24576E1100A29464 /* Helpers */,
 				965F90EE2456395A003AEE89 /* ViewControllers */,
-				96CDF6FE2457815400A29464 /* Views */,
+				964F8EC624589FA6000C3A48 /* Views */,
+				96CDF6FE2457815400A29464 /* ViewConstraints */,
 				967153A3245357DE00739A45 /* AppDelegate.swift */,
 				96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */,
 				96A9EEDC2454BF06000212AA /* Lato-Light.ttf */,
@@ -114,12 +138,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		96CDF6FE2457815400A29464 /* Views */ = {
+		96CDF6FE2457815400A29464 /* ViewConstraints */ = {
 			isa = PBXGroup;
 			children = (
-				96CDF6FF2457817000A29464 /* LoginView.swift */,
+				96CDF6FF2457817000A29464 /* LoginViewConstraints.swift */,
+				964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */,
 			);
-			path = Views;
+			path = ViewConstraints;
 			sourceTree = "<group>";
 		};
 		A8E07F94F6B752E457E1E47A /* Frameworks */ = {
@@ -258,12 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96CDF7002457817000A29464 /* LoginView.swift in Sources */,
+				96CDF7002457817000A29464 /* LoginViewConstraints.swift in Sources */,
 				964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */,
+				964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */,
 				965F90F024563BDC003AEE89 /* LoginViewController.swift in Sources */,
 				965F90ED24563952003AEE89 /* SignUpViewController.swift in Sources */,
+				964F8ECB2458BA9F000C3A48 /* Constants.swift in Sources */,
 				967153A6245357DE00739A45 /* ViewController.swift in Sources */,
 				96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */,
+				964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */,
 				967153A4245357DE00739A45 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

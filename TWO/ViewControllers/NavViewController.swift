@@ -31,7 +31,8 @@ class NavViewController: UINavigationController {
     }
     
     fileprivate func isLoggedIn() -> Bool {
-        return UserDefaults.standard.bool(forKey: "isLoggedIn")
+        return false
+//        return UserDefaults.standard.bool(forKey: "isLoggedIn")
     }
     
     @objc func showHomeController() {
