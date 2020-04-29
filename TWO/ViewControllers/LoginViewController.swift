@@ -29,6 +29,7 @@ class LoginViewController: UIViewController {
         textfield.textColor = .white
         textfield.textAlignment = .center
         textfield.autocapitalizationType = .none
+        textfield.isSecureTextEntry = true
         return textfield
     }()
     
@@ -62,8 +63,8 @@ class LoginViewController: UIViewController {
     }
     
     @objc func onLoginButtonPress(sender: UIButton) {
-        let email = emailField.text!
-        let password = "tester"
+        let email = emailField.text ?? ""
+        let password = passwordField.text ?? ""
         Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
             if err != nil {
                 print(err ?? "Error signing in")
