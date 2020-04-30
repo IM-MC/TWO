@@ -80,7 +80,7 @@ class LoginViewController: UIViewController {
     }
     
     @objc func onSignUpButtonPress(sender: UIButton) {
-        
+        self.navigationController?.pushViewController(SignUpViewController(), animated: true)
     }
 
     /*

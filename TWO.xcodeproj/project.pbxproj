@@ -12,6 +12,9 @@
 		964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */; };
 		964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC724589FC4000C3A48 /* FastingView.swift */; };
 		964F8ECB2458BA9F000C3A48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8ECA2458BA9F000C3A48 /* Constants.swift */; };
+		964F8ECD2459EC60000C3A48 /* SignUpViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8ECC2459EC60000C3A48 /* SignUpViewConstraints.swift */; };
+		964F8ECF245A0015000C3A48 /* InputFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8ECE245A0015000C3A48 /* InputFieldView.swift */; };
+		964F8ED1245A1990000C3A48 /* FoodSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8ED0245A1990000C3A48 /* FoodSelection.swift */; };
 		965F90ED24563952003AEE89 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F90EC24563952003AEE89 /* SignUpViewController.swift */; };
 		965F90F024563BDC003AEE89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F90EF24563BDC003AEE89 /* LoginViewController.swift */; };
 		967153A4245357DE00739A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967153A3245357DE00739A45 /* AppDelegate.swift */; };
@@ -34,6 +37,9 @@
 		964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewConstraints.swift; sourceTree = "<group>"; };
 		964F8EC724589FC4000C3A48 /* FastingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingView.swift; sourceTree = "<group>"; };
 		964F8ECA2458BA9F000C3A48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		964F8ECC2459EC60000C3A48 /* SignUpViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewConstraints.swift; sourceTree = "<group>"; };
+		964F8ECE245A0015000C3A48 /* InputFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputFieldView.swift; sourceTree = "<group>"; };
+		964F8ED0245A1990000C3A48 /* FoodSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelection.swift; sourceTree = "<group>"; };
 		965F90EC24563952003AEE89 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		965F90EF24563BDC003AEE89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		967153A0245357DE00739A45 /* TWO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TWO.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				964F8EC724589FC4000C3A48 /* FastingView.swift */,
+				964F8ECE245A0015000C3A48 /* InputFieldView.swift */,
+				964F8ED0245A1990000C3A48 /* FoodSelection.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -143,6 +151,7 @@
 			children = (
 				96CDF6FF2457817000A29464 /* LoginViewConstraints.swift */,
 				964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */,
+				964F8ECC2459EC60000C3A48 /* SignUpViewConstraints.swift */,
 			);
 			path = ViewConstraints;
 			sourceTree = "<group>";
@@ -283,7 +292,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964F8ED1245A1990000C3A48 /* FoodSelection.swift in Sources */,
 				96CDF7002457817000A29464 /* LoginViewConstraints.swift in Sources */,
+				964F8ECD2459EC60000C3A48 /* SignUpViewConstraints.swift in Sources */,
+				964F8ECF245A0015000C3A48 /* InputFieldView.swift in Sources */,
 				964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */,
 				964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */,
 				965F90F024563BDC003AEE89 /* LoginViewController.swift in Sources */,
