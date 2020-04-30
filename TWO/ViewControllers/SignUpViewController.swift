@@ -105,7 +105,7 @@ class SignUpViewController: UIViewController {
     }
     
     private func pushFastView() {
-        self.navigationController?.pushViewController(ViewController(), animated: true)
+        self.navigationController?.pushViewController(FastViewController(), animated: true)
     }
     
     // Store user info in DB

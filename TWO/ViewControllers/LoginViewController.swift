@@ -69,11 +69,16 @@ class LoginViewController: UIViewController {
             if err != nil {
                 print(err ?? "Error signing in")
             } else {
-                self.navigationController?.pushViewController(ViewController(), animated: true)
+                self.navigationController?.pushViewController(FastViewController(), animated: true)
                 
-                UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                UserDefaults.standard.set(email, forKey: "userEmail")
-                UserDefaults.standard.set(password, forKey: "userPassword")
+                
+                // Restore textfields
+                self.emailField.text = ""
+                self.passwordField.text = ""
+                
+                UserDefaults.standard.set(true, forKey: kIsLoggedIn)
+                UserDefaults.standard.set(email, forKey: kUserEmail)
+                UserDefaults.standard.set(password, forKey: kUserPassword)
                 UserDefaults.standard.synchronize()
             }
         }
@@ -81,6 +86,10 @@ class LoginViewController: UIViewController {
     
     @objc func onSignUpButtonPress(sender: UIButton) {
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
+        
+        // Restore textfields
+        self.emailField.text = ""
+        self.passwordField.text = ""
     }
 
     /*

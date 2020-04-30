@@ -49,3 +49,8 @@ struct Font {
     }
     
 }
+
+let kUserEmail = "userEmail"
+let kUserPassword = "userPassword"
+let kFoodSelection = "foodSelected"
+let kIsLoggedIn = "isLoggedIn"

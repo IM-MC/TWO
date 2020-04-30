@@ -9,10 +9,18 @@
 import UIKit
 import Firebase
 
-class ViewController: UIViewController {
+class FastViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
     var user: User?
+    
+    let exitButton: UIButton = {
+        let image = #imageLiteral(resourceName: "ExitIcon")
+        let button = UIButton()
+        button.setImage(image, for: .normal)
+        button.addTarget(self, action: #selector(popToRoot), for: .touchUpInside)
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,13 +47,13 @@ class ViewController: UIViewController {
     
     func setUser(_ user: User?) {
         self.user = user
-        self.setupView()
+        setupView()
+        self.configureView()
     }
     
-    func setupView() {
+    func configureView() {
         if let uid = self.user?.uid {
             let fastView = FastingView(uid: uid)
-            
             self.view.addSubview(fastView)
             
             fastView.translatesAutoresizingMaskIntoConstraints = false
@@ -54,7 +62,11 @@ class ViewController: UIViewController {
         } else {
             return // Error
         }
-        
+    }
+    
+    @objc func popToRoot(sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: kIsLoggedIn)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
 
