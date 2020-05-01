@@ -55,10 +55,12 @@ class FastViewController: UIViewController {
         if let uid = self.user?.uid {
             let fastView = FastingView(uid: uid)
             self.view.addSubview(fastView)
+            self.view.bringSubview(toFront: exitButton)
             
             fastView.translatesAutoresizingMaskIntoConstraints = false
             fastView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
             fastView.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true
+            fastView.heightAnchor.constraint(greaterThanOrEqualToConstant: 515).isActive = true
         } else {
             return // Error
         }
@@ -66,6 +68,7 @@ class FastViewController: UIViewController {
     
     @objc func popToRoot(sender: UIButton) {
         UserDefaults.standard.set(false, forKey: kIsLoggedIn)
+        UserDefaults.standard.synchronize()
         self.navigationController?.popToRootViewController(animated: true)
     }
 }

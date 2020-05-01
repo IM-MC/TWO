@@ -15,12 +15,15 @@ extension FastingView {
         self.addSubview(statusLabel)
         self.addSubview(titleLabel)
         self.addSubview(motivationLabel)
+        self.addSubview(placeholderView)
+        self.addSubview(startStopButton)
         
         setupCurrentlyLabel()
         setupStatusLabel()
         setupTitleLabel()
         setupMotivationLabel()
-        
+        setupPlaceholder()
+        setupStartStop()
     }
     
     func setupCurrentlyLabel() {
@@ -45,5 +48,21 @@ extension FastingView {
         motivationLabel.translatesAutoresizingMaskIntoConstraints = false
         motivationLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         motivationLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8).isActive = true
+    }
+    
+    func setupPlaceholder() {
+        placeholderView.translatesAutoresizingMaskIntoConstraints = false
+        placeholderView.widthAnchor.constraint(equalToConstant: 226).isActive = true
+        placeholderView.heightAnchor.constraint(equalToConstant: 151).isActive = true
+        placeholderView.topAnchor.constraint(equalTo: motivationLabel.bottomAnchor, constant: 27).isActive = true
+        placeholderView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+    }
+    
+    func setupStartStop() {
+        startStopButton.translatesAutoresizingMaskIntoConstraints = false
+        startStopButton.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        startStopButton.topAnchor.constraint(equalTo: placeholderView.bottomAnchor, constant: 40).isActive = true
+        startStopButton.widthAnchor.constraint(equalToConstant: 167).isActive = true
+        startStopButton.heightAnchor.constraint(equalToConstant: 52).isActive = true
     }
 }

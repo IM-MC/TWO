@@ -94,6 +94,7 @@ class SignUpViewController: UIViewController {
             } else if let result = res {
                 self.storeInDatabase(uid: result.user.uid)
                 self.pushFastView()
+                self.updateUserDefaults()
             } else {
                 print("Error creating user on Auth")
             }
@@ -102,6 +103,16 @@ class SignUpViewController: UIViewController {
     
     @objc func onCancel(sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateUserDefaults() {
+        let email = emailField.textField.text!
+        let password = passwordField.textField.text!
+        
+        UserDefaults.standard.set(true, forKey: kIsLoggedIn)
+        UserDefaults.standard.set(email, forKey: kUserEmail)
+        UserDefaults.standard.set(password, forKey: kUserPassword)
+        UserDefaults.standard.synchronize()
     }
     
     private func pushFastView() {
@@ -118,10 +129,11 @@ class SignUpViewController: UIViewController {
         let data: [String: Any] = [
             "first_name": firstName,
             "last_name": lastName,
-            "email": email,
-            "password": password,
-            "is_fasting": false,
-            "food_selection": selectedFood,
+            "email": email, // keep track in db, not needed in app
+            "password": password, // keep track in db, not needed in app
+            kdbIsFasting: false,
+            kdbFoodSelection: selectedFood,
+            kdbStartTime: Timestamp(date: Date()), // always replaced
             "friends": [],
         ]
         
