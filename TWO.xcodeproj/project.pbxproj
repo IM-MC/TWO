@@ -10,6 +10,8 @@
 		513E4E9D1A1616EAEFFCEC96 /* Pods_TWO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */; };
 		964ECB50245B77EB00010E8B /* ConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB4F245B77EB00010E8B /* ConsumptionView.swift */; };
 		964ECB52245B7D6600010E8B /* ConsumptionViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */; };
+		964ECB54245DFF7C00010E8B /* FastInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB53245DFF7C00010E8B /* FastInfoView.swift */; };
+		964ECB56245E005A00010E8B /* FastInfoViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB55245E005A00010E8B /* FastInfoViewConstraints.swift */; };
 		964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC22457AD94000C3A48 /* NavViewController.swift */; };
 		964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */; };
 		964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964F8EC724589FC4000C3A48 /* FastingView.swift */; };
@@ -38,6 +40,8 @@
 		8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		964ECB4F245B77EB00010E8B /* ConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionView.swift; sourceTree = "<group>"; };
 		964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewConstraints.swift; sourceTree = "<group>"; };
+		964ECB53245DFF7C00010E8B /* FastInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastInfoView.swift; sourceTree = "<group>"; };
+		964ECB55245E005A00010E8B /* FastInfoViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastInfoViewConstraints.swift; sourceTree = "<group>"; };
 		964F8EC22457AD94000C3A48 /* NavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewConstraints.swift; sourceTree = "<group>"; };
 		964F8EC724589FC4000C3A48 /* FastingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 				964F8ECE245A0015000C3A48 /* InputFieldView.swift */,
 				964F8ED0245A1990000C3A48 /* FoodSelection.swift */,
 				964ECB4F245B77EB00010E8B /* ConsumptionView.swift */,
+				964ECB53245DFF7C00010E8B /* FastInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 				964F8ECC2459EC60000C3A48 /* SignUpViewControllerConstraints.swift */,
 				964F8ED2245B55BC000C3A48 /* FastViewControllerConstraints.swift */,
 				964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */,
+				964ECB55245E005A00010E8B /* FastInfoViewConstraints.swift */,
 			);
 			path = ViewConstraints;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 				96CDF7002457817000A29464 /* LoginViewControllerConstraints.swift in Sources */,
 				964F8ECD2459EC60000C3A48 /* SignUpViewControllerConstraints.swift in Sources */,
 				964F8ECF245A0015000C3A48 /* InputFieldView.swift in Sources */,
+				964ECB56245E005A00010E8B /* FastInfoViewConstraints.swift in Sources */,
 				964ECB50245B77EB00010E8B /* ConsumptionView.swift in Sources */,
 				964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */,
 				964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */,
@@ -314,6 +321,7 @@
 				964ECB52245B7D6600010E8B /* ConsumptionViewConstraints.swift in Sources */,
 				964F8ECB2458BA9F000C3A48 /* Constants.swift in Sources */,
 				967153A6245357DE00739A45 /* FastViewController.swift in Sources */,
+				964ECB54245DFF7C00010E8B /* FastInfoView.swift in Sources */,
 				96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */,
 				964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */,
 				967153A4245357DE00739A45 /* AppDelegate.swift in Sources */,

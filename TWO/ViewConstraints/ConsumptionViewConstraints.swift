@@ -42,7 +42,7 @@ extension ConsumptionView {
         elapsedPercent.translatesAutoresizingMaskIntoConstraints = false
         elapsedPercent.topAnchor.constraint(equalTo: self.topAnchor, constant: 20).isActive = true
         elapsedPercent.leftAnchor.constraint(equalTo: elapsedLabel.rightAnchor, constant: 1).isActive = true
-        elapsedPercent.widthAnchor.constraint(equalToConstant: 63).isActive = true
+        elapsedPercent.widthAnchor.constraint(greaterThanOrEqualToConstant: 63).isActive = true
         elapsedLabel.heightAnchor.constraint(equalToConstant: 25).isActive = true
         
         elapsedTime.translatesAutoresizingMaskIntoConstraints = false

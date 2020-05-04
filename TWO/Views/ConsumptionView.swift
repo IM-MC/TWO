@@ -89,7 +89,7 @@ class ConsumptionView: UIView {
         
         let elapsed = Int(Date().timeIntervalSince(self.startTime!))
         self.elapsed = elapsed
-        self.remaining = self.remaining - elapsed
+        self.remaining = self.remaining - elapsed > 0 ? self.remaining - elapsed : 0
         print(elapsed)
         let image = foodProgression[0]
         self.foodImageView.image = image
@@ -98,7 +98,7 @@ class ConsumptionView: UIView {
     @objc func onTimerFires(timer: Timer) {
         self.elapsed += 1
         
-        if self.remaining != 0 {
+        if self.remaining > 0 {
             self.remaining -= 1
         }
         
@@ -117,13 +117,13 @@ class ConsumptionView: UIView {
         if progressionNumber > 5 {
             progressionNumber = 5
         }
-//        self.foodImageView.contentMode = .scaleAspectFit
+
         self.foodImageView.contentMode = .bottom
-        self.foodImageView.image = foodProgression[3]
+        self.foodImageView.image = foodProgression[Int(progressionNumber)]
     }
     
     private func secondsToTime(seconds: Int) -> (Int, Int, Int) {
-        return (seconds/3600, (seconds%3600)/60, ((seconds%3600)%60))
+        return (seconds/3600, (seconds%3600)/60, (seconds%60))
     }
     
     private func getTimeText(seconds: Int) -> String {

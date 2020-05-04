@@ -134,6 +134,8 @@ class SignUpViewController: UIViewController {
             kdbIsFasting: false,
             kdbFoodSelection: selectedFood,
             kdbStartTime: Timestamp(date: Date()), // always replaced
+            kdbFastsCompleted: 0,
+            kdbLongestFast: 0,
             "friends": [],
         ]
         

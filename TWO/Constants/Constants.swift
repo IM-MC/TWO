@@ -17,6 +17,8 @@ struct Colors {
     static let shadowGrey = UIColor.white.withAlphaComponent(0.5)
     static let shadowGreen = UIColor.init(red: 76/255, green: 255/255, blue: 67/255, alpha: 0.5)
     
+    static let divider = UIColor.init(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
+    
     struct InputField {
         static let dark = UIColor.init(red: 16/255, green: 16/255, blue: 16/255, alpha: 1)
     }
@@ -45,8 +47,11 @@ struct Font {
     static let title = UIFont(name: Text.Lato.Bold, size: 29)
     static let infoBig = UIFont(name: Text.Lato.Bold, size: 21)
     static let infoBigLight = UIFont(name: Text.Lato.Light, size: 21)
+    static let infoMedLight = UIFont(name: Text.Lato.Light, size: 16)
     static let infoSmall = UIFont(name: Text.Lato.Bold, size: 14)
     static let infoSmallLight = UIFont(name: Text.Lato.Light, size: 14)
+    
+    static let megaLight = UIFont(name: Text.Lato.Light, size: 33)
     
     struct Button {
         static let big = UIFont(name: Text.Lato.Bold, size: 20)
@@ -71,6 +76,8 @@ let kIsLoggedIn = "isLoggedIn"
 let kdbIsFasting = "is_fasting"
 let kdbFoodSelection = "food_selection"
 let kdbStartTime = "start_time"
+let kdbFastsCompleted = "completed_fasts"
+let kdbLongestFast = "longest_fast"
 
 let kFoodValues = [
     0: FoodProp(title: "Popsicle Pwner", slogan: "cool as...", imageProgression: popsicleTransition)

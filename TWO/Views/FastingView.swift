@@ -15,6 +15,8 @@ class FastingView: UIView {
     private var foodChoice: Int = -1
     private var isFasting: Bool = false // carry one source of truth for fast state
     private var startTime: Date = Date()
+    private var completedFasts: Int = 0
+    private var longestFast: Int = 0
     let db = Firestore.firestore()
     
     let currentlyLabel: UILabel = {
@@ -67,6 +69,8 @@ class FastingView: UIView {
         return button
     }()
     
+    var fastInfoView: FastInfoView = FastInfoView()
+    
     required init(uid: String) {
         super.init(frame: .zero)
         self.uid = uid
@@ -84,6 +88,7 @@ class FastingView: UIView {
     }
     
     func configureView() {
+        fastInfoView = FastInfoView(uid: self.uid)
         self.setupView()
         
         let docRef = db.collection("users").document(self.uid)
@@ -98,6 +103,8 @@ class FastingView: UIView {
                 
                 self.isFasting = document.get(kdbIsFasting) as? Bool ?? false
                 self.startTime = (document.get(kdbStartTime) as! Timestamp).dateValue()
+                self.completedFasts = document.get(kdbFastsCompleted) as! Int
+                self.longestFast = document.get(kdbLongestFast) as! Int
                 self.setStatus(self.isFasting)
                 self.updateUI()
                 
@@ -121,6 +128,7 @@ class FastingView: UIView {
         let food_data = kFoodValues[self.foodChoice]
         self.titleLabel.text = food_data?.title
         self.motivationLabel.text = food_data?.slogan
+        self.fastInfoView.refreshValues()
         
         if self.isFasting {
             startStopButton.setTitle("End Fast", for: .normal)
@@ -165,8 +173,19 @@ class FastingView: UIView {
         
         // if we can't update the DB values, don't update our UI
         if self.isFasting {
+            
+            if didCompleteFast() {
+                self.completedFasts += 1
+            }
+            
+            if isLongerFast() {
+                self.longestFast = Int(Date().timeIntervalSince(self.startTime))
+            }
+            
             userRef.updateData([
-                kdbIsFasting: false
+                kdbIsFasting: false,
+                kdbFastsCompleted: self.completedFasts,
+                kdbLongestFast: self.longestFast,
             ]) { (err) in
                 if let err = err {
                     print("Error updating document after fast: \(err)")
@@ -194,5 +213,13 @@ class FastingView: UIView {
     func fullViewUpdate() {
         self.reassignPlaceholder()
         self.updateUI()
+    }
+    
+    func didCompleteFast() -> Bool {
+        return Int(Date().timeIntervalSince(self.startTime)) > 57600
+    }
+    
+    func isLongerFast() -> Bool {
+        return Int(Date().timeIntervalSince(self.startTime)) > self.longestFast
     }
 }
