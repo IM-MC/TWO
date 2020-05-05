@@ -25,6 +25,7 @@ extension FastViewController {
         scrollView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         scrollView.heightAnchor.constraint(equalTo: self.view.heightAnchor, multiplier: 0.8).isActive = true
     }
+    
     func setupExitButton() {
         exitButton.translatesAutoresizingMaskIntoConstraints = false
         exitButton.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 21).isActive = true

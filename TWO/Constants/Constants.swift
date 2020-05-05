@@ -12,6 +12,7 @@ struct Colors {
     
     static let appPrimaryColor = UIColor.init(red: 1, green: 173/255, blue: 99/255, alpha: 1)
     static let appBackgroundColor = UIColor.init(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
+    static let cardBackgroundColor = UIColor.init(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
     static let startGreen = UIColor.init(red: 91/255, green: 227/255, blue: 87/255, alpha: 1)
     
     static let shadowGrey = UIColor.white.withAlphaComponent(0.5)

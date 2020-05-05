@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "popsicle 3.png",
+      "filename" : "Slice 3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "popsicle 3@2x.png",
+      "filename" : "Slice 3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "popsicle 3@3x.png",
+      "filename" : "Slice 3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

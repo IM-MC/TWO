@@ -52,6 +52,11 @@ class FastViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addFriendView()
+    }
 
     
     func setUser(_ user: User?) {
@@ -79,6 +84,18 @@ class FastViewController: UIViewController {
         UserDefaults.standard.set(false, forKey: kIsLoggedIn)
         UserDefaults.standard.synchronize()
         self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func addFriendView() {
+        let friendVC = FriendViewController()
+        
+        self.addChildViewController(friendVC)
+        self.view.addSubview(friendVC.view)
+        friendVC.didMove(toParentViewController: self)
+        
+        let height = view.frame.height
+        let width = view.frame.width
+        friendVC.view.frame = CGRect(x: 0, y: self.view.frame.maxY, width: width, height: height)
     }
 }
 

@@ -118,7 +118,7 @@ class ConsumptionView: UIView {
             progressionNumber = 5
         }
 
-        self.foodImageView.contentMode = .bottom
+        self.foodImageView.contentMode = .scaleAspectFit
         self.foodImageView.image = foodProgression[Int(progressionNumber)]
     }
     
