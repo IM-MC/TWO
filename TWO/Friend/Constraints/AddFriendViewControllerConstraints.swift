@@ -14,11 +14,11 @@ extension AddFriendViewController {
         self.view.addSubview(bgButton)
         self.view.addSubview(prompt)
         
-        setupBGButton()
+        setupBG()
         setupPrompt()
     }
     
-    func setupBGButton() {
+    func setupBG() {
         bgButton.translatesAutoresizingMaskIntoConstraints = false
         bgButton.heightAnchor.constraint(equalTo: self.view.heightAnchor).isActive = true
         bgButton.widthAnchor.constraint(equalTo: self.view.widthAnchor).isActive = true

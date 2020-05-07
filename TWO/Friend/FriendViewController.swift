@@ -14,6 +14,7 @@ class FriendViewController: UIViewController, UIGestureRecognizerDelegate, UITab
     var handle: AuthStateDidChangeListenerHandle?
     var user: User?
     var friends = [String]()
+    var friendCount = 0
     
     let kCellId = "friend_cell"
     let db = Firestore.firestore()
@@ -63,6 +64,7 @@ class FriendViewController: UIViewController, UIGestureRecognizerDelegate, UITab
     
     init(friends: [String]) {
         self.friends = friends
+        self.friendCount = self.friends.count
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -132,7 +134,7 @@ class FriendViewController: UIViewController, UIGestureRecognizerDelegate, UITab
         self.addChildViewController(addFriendVC)
         self.view.addSubview(addFriendVC.view)
         addFriendVC.didMove(toParentViewController: self)
-        
+
         addFriendVC.view.alpha = 0
 
     }
@@ -154,8 +156,10 @@ class FriendViewController: UIViewController, UIGestureRecognizerDelegate, UITab
             
             if abs(yVelocity) < 500 {
                 if Int(yCoordinate) > 300 {
-                    UIView.animate(withDuration: 0.3) {
+                   UIView.animate(withDuration: 0.3, animations: {
                         self.view.frame = CGRect(x: 0, y: yDefaultPos, width: self.view.frame.width, height: self.view.frame.height)
+                    }) { (_) in
+                        self.reloadTableIfNeeded()
                     }
                 } else {
                     UIView.animate(withDuration: 0.3) {
@@ -165,14 +169,28 @@ class FriendViewController: UIViewController, UIGestureRecognizerDelegate, UITab
                 }
             } else {
                 if yVelocity > 0 {
-                    UIView.animate(withDuration: 0.3) {
+                    UIView.animate(withDuration: 0.3, animations: {
                         self.view.frame = CGRect(x: 0, y: yDefaultPos, width: self.view.frame.width, height: self.view.frame.height)
+                    }) { (_) in
+                        self.reloadTableIfNeeded()
                     }
                 } else {
                     UIView.animate(withDuration: 0.3) {
                         self.view.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: self.view.frame.height)
                         self.tableView.isScrollEnabled = true
                     }
+                }
+            }
+        }
+    }
+    
+    func reloadTableIfNeeded() {
+        db.collection("users").document(self.user!.uid).getDocument { (doc, err) in
+            if let document = doc, document.exists {
+                self.friends = document.get(kdbFriends) as! [String]
+                if self.friends.count != self.friendCount {
+                    self.tableView.reloadData()
+                    self.friendCount = self.friends.count
                 }
             }
         }

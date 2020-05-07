@@ -56,6 +56,7 @@ class AddFriendPrompt: UIView {
         field.layer.cornerRadius = 4
         field.backgroundColor = Colors.Input.background
         field.textAlignment = .left
+        field.textColor = .white
         return field
     }()
     
@@ -95,15 +96,19 @@ class AddFriendPrompt: UIView {
             
             docRef.getDocument { (doc, err) in
                 if let document = doc, document.exists {
-                    print("YOYO")
                     self.db.collection("users").document(self.uid).updateData(
                         [kdbFriends: FieldValue.arrayUnion([code])
                     ])
                     docRef.updateData((
                         [kdbFriends: FieldValue.arrayUnion([self.uid])]
                     ))
+                    
+                    self.friendCodeField.text = ""
+                    self.friendCodeField.attributedPlaceholder = NSAttributedString(string: "Success!", attributes: [NSAttributedString.Key.foregroundColor: UIColor.green])
                 } else {
                     print("Error, user doesn't exist")
+                    self.friendCodeField.text = ""
+                    self.friendCodeField.attributedPlaceholder = NSAttributedString(string: "Invalid code!", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
                 }
             }
         } else {

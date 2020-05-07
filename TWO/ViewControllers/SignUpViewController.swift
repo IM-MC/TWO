@@ -121,6 +121,8 @@ class SignUpViewController: UIViewController {
     
     // Store user info in DB
     private func storeInDatabase(uid: String) {
+        let width = Int.random(in: 30..<200)
+        let height = Int.random(in: 30..<200)
         let firstName = firstNameField.textField.text ?? ""
         let lastName = lastNameField.textField.text ?? ""
         let email = emailField.textField.text ?? ""
@@ -137,7 +139,7 @@ class SignUpViewController: UIViewController {
             kdbFastsCompleted: 0,
             kdbLongestFast: 0,
             kdbFriends: [],
-            kdbProfileImg: "https://source.unsplash.com/random/100x100",
+            kdbProfileImg: "https://source.unsplash.com/random/\(width)x\(height)",
         ]
         
         db.collection("users").document(uid).setData(data) { err in

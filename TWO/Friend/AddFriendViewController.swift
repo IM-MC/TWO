@@ -27,6 +27,8 @@ class AddFriendViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         self.uid = uid
         
+        self.view.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: self.view.frame.height)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         setupView()
     }
     
@@ -36,8 +38,6 @@ class AddFriendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: self.view.frame.height)
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
     
 
