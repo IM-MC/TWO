@@ -14,6 +14,7 @@ struct Colors {
     static let appBackgroundColor = UIColor.init(red: 25/255, green: 26/255, blue: 26/255, alpha: 1)
     static let cardBackgroundColor = UIColor.init(red: 39/255, green: 39/255, blue: 39/255, alpha: 1)
     static let startGreen = UIColor.init(red: 91/255, green: 227/255, blue: 87/255, alpha: 1)
+    static let error = UIColor.init(red: 170/255, green: 6/255, blue: 6/255, alpha: 1)
     
     static let shadowGrey = UIColor.white.withAlphaComponent(0.5)
     static let shadowGreen = UIColor.init(red: 76/255, green: 255/255, blue: 67/255, alpha: 0.5)
@@ -59,6 +60,7 @@ struct Font {
     static let infoBig = UIFont(name: Text.Lato.Bold, size: 21)
     static let infoBigLight = UIFont(name: Text.Lato.Light, size: 21)
     static let infoMed = UIFont(name: Text.Lato.Bold, size: 16)
+    static let infoMedReg = UIFont(name: Text.Lato.Reg, size: 16)
     static let infoMedLight = UIFont(name: Text.Lato.Light, size: 16)
     static let infoSmall = UIFont(name: Text.Lato.Bold, size: 14)
     static let infoSmallLight = UIFont(name: Text.Lato.Light, size: 14)

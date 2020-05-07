@@ -20,6 +20,8 @@ extension SignUpViewController {
         self.view.addSubview(popsicleSelection)
         self.view.addSubview(signUpButton)
         self.view.addSubview(cancelButton)
+        self.view.addSubview(errorPropButton)
+        errorPropButton.alpha = 0
                         
         setupTitle()
         setupFirstName()
@@ -30,6 +32,7 @@ extension SignUpViewController {
         setupPopsicle()
         setupCancelButton()
         setupSignUpButton()
+        setupError()
     }
     
     
@@ -103,5 +106,13 @@ extension SignUpViewController {
         signUpButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         signUpButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         signUpButton.bottomAnchor.constraint(equalTo: cancelButton.topAnchor, constant: -9).isActive = true
+    }
+    
+    func setupError() {
+        errorPropButton.translatesAutoresizingMaskIntoConstraints = false
+        errorPropButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        errorPropButton.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -21).isActive = true
+        errorPropButton.widthAnchor.constraint(greaterThanOrEqualToConstant: 100).isActive = true
+        errorPropButton.heightAnchor.constraint(greaterThanOrEqualToConstant: 33).isActive = true
     }
 }

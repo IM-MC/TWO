@@ -54,6 +54,16 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
+    let errorPropButton: UIButton = {
+        let button = UIButton()
+        button.isUserInteractionEnabled = false
+        button.layer.cornerRadius = 8
+        button.backgroundColor = Colors.error
+        button.titleLabel?.font = Font.infoMedReg
+        button.contentEdgeInsets = UIEdgeInsetsMake(0, 11, 0, 11)
+        return button
+    }()
+    
     // Food Options
     let popsicleSelection: FoodSelection = FoodSelection(image: #imageLiteral(resourceName: "PopsicleFull"))
     
@@ -85,16 +95,43 @@ class SignUpViewController: UIViewController {
     }
     
     @objc func onSignUp(sender: UIButton) {
-        let email = emailField.textField.text ?? ""
-        let password = passwordField.textField.text ?? ""
+        guard let firstName = firstNameField.textField.text, !firstName.isEmpty else {
+            errorPropButton.setTitle("First name can't be empty!", for: .normal)
+            errorPropButton.alpha = 1
+            return
+        }
+        
+        guard let email = emailField.textField.text, !email.isEmpty else {
+            errorPropButton.setTitle("Email can't be empty!", for: .normal)
+            errorPropButton.alpha = 1
+            return
+        }
+        
+        guard let password = passwordField.textField.text, !password.isEmpty else {
+            errorPropButton.setTitle("Password can't be empty", for: .normal)
+            errorPropButton.alpha = 1
+            return
+        }
+        
+        let spinner = SpinnerViewController()
+        
+        self.addChildViewController(spinner)
+        spinner.view.frame = self.view.frame
+        self.view.addSubview(spinner.view)
+        spinner.didMove(toParentViewController: self)
         
         Auth.auth().createUser(withEmail: email, password: password) { (res, err) in
+            spinner.willMove(toParentViewController: nil)
+            spinner.view.removeFromSuperview()
+            spinner.removeFromParentViewController()
+            
             if err != nil {
                 print(err ?? "Error creating user")
             } else if let result = res {
                 self.storeInDatabase(uid: result.user.uid)
                 self.pushFastView()
                 self.updateUserDefaults()
+                self.errorPropButton.alpha = 0
             } else {
                 print("Error creating user on Auth")
             }
@@ -121,12 +158,14 @@ class SignUpViewController: UIViewController {
     
     // Store user info in DB
     private func storeInDatabase(uid: String) {
+        // temp for images
         let width = Int.random(in: 30..<200)
         let height = Int.random(in: 30..<200)
-        let firstName = firstNameField.textField.text ?? ""
+        
+        let firstName = firstNameField.textField.text!
         let lastName = lastNameField.textField.text ?? ""
-        let email = emailField.textField.text ?? ""
-        let password = passwordField.textField.text ?? ""
+        let email = emailField.textField.text!
+        let password = passwordField.textField.text!
         
         let data: [String: Any] = [
             kdbFirstName: firstName,
@@ -139,7 +178,7 @@ class SignUpViewController: UIViewController {
             kdbFastsCompleted: 0,
             kdbLongestFast: 0,
             kdbFriends: [],
-            kdbProfileImg: "https://source.unsplash.com/random/\(width)x\(height)",
+            kdbProfileImg: "https://source.unsplash.com/random/\(width)x\(height)", //random image for now since have no backend storage
         ]
         
         db.collection("users").document(uid).setData(data) { err in

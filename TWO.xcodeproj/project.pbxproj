@@ -33,12 +33,12 @@
 		96A015762463A3A10090027A /* AddFriendPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015752463A3A10090027A /* AddFriendPrompt.swift */; };
 		96A015782463A6320090027A /* AddFriendPromptConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015772463A6320090027A /* AddFriendPromptConstraints.swift */; };
 		96A0157A2463AC380090027A /* AddFriendViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015792463AC380090027A /* AddFriendViewControllerConstraints.swift */; };
+		96A5CD7B2464C15B008BDEAB /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A5CD7A2464C15B008BDEAB /* SpinnerViewController.swift */; };
 		96A9EEDE2454BF06000212AA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */; };
 		96A9EEDF2454BF06000212AA /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDC2454BF06000212AA /* Lato-Light.ttf */; };
 		96A9EEE02454BF06000212AA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */; };
 		96AB2C25246233F50075EE4B /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB2C24246233F50075EE4B /* FriendTableViewCell.swift */; };
 		96AB2C2B246238430075EE4B /* FriendTableViewCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB2C2A246238430075EE4B /* FriendTableViewCellConstraints.swift */; };
-		96C1398F246338DD00E0EEFC /* TwoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1398E246338DD00E0EEFC /* TwoUser.swift */; };
 		96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FC24576E2D00A29464 /* Utilities.swift */; };
 		96CDF7002457817000A29464 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FF2457817000A29464 /* LoginViewControllerConstraints.swift */; };
 		96CDF7022457834800A29464 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CDF7012457834800A29464 /* GoogleService-Info.plist */; };
@@ -74,12 +74,12 @@
 		96A015752463A3A10090027A /* AddFriendPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendPrompt.swift; sourceTree = "<group>"; };
 		96A015772463A6320090027A /* AddFriendPromptConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendPromptConstraints.swift; sourceTree = "<group>"; };
 		96A015792463AC380090027A /* AddFriendViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewControllerConstraints.swift; sourceTree = "<group>"; };
+		96A5CD7A2464C15B008BDEAB /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		96A9EEDC2454BF06000212AA /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		96AB2C24246233F50075EE4B /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		96AB2C2A246238430075EE4B /* FriendTableViewCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCellConstraints.swift; sourceTree = "<group>"; };
-		96C1398E246338DD00E0EEFC /* TwoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoUser.swift; sourceTree = "<group>"; };
 		96CDF6FC24576E2D00A29464 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		96CDF6FF2457817000A29464 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
 		96CDF7012457834800A29464 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -121,6 +121,7 @@
 				965F90EC24563952003AEE89 /* SignUpViewController.swift */,
 				965F90EF24563BDC003AEE89 /* LoginViewController.swift */,
 				964F8EC22457AD94000C3A48 /* NavViewController.swift */,
+				96A5CD7A2464C15B008BDEAB /* SpinnerViewController.swift */,
 				96CDF6FE2457815400A29464 /* Constraints */,
 			);
 			path = ViewControllers;
@@ -153,7 +154,6 @@
 				964F8EC624589FA6000C3A48 /* Views */,
 				96AB2C26246235590075EE4B /* Fast */,
 				96AB2C28246237FC0075EE4B /* Friend */,
-				96C13990246338E600E0EEFC /* User */,
 				967153A3245357DE00739A45 /* AppDelegate.swift */,
 				96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */,
 				96A9EEDC2454BF06000212AA /* Lato-Light.ttf */,
@@ -211,14 +211,6 @@
 				96A015792463AC380090027A /* AddFriendViewControllerConstraints.swift */,
 			);
 			path = Constraints;
-			sourceTree = "<group>";
-		};
-		96C13990246338E600E0EEFC /* User */ = {
-			isa = PBXGroup;
-			children = (
-				96C1398E246338DD00E0EEFC /* TwoUser.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		96CDF6FB24576E1100A29464 /* Helpers */ = {
@@ -390,6 +382,7 @@
 				964ECB50245B77EB00010E8B /* ConsumptionView.swift in Sources */,
 				964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */,
 				964F8EC524589E6D000C3A48 /* FastingViewConstraints.swift in Sources */,
+				96A5CD7B2464C15B008BDEAB /* SpinnerViewController.swift in Sources */,
 				965F90F024563BDC003AEE89 /* LoginViewController.swift in Sources */,
 				965F90ED24563952003AEE89 /* SignUpViewController.swift in Sources */,
 				964ECB52245B7D6600010E8B /* ConsumptionViewConstraints.swift in Sources */,
@@ -400,7 +393,6 @@
 				96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */,
 				964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */,
 				967153A4245357DE00739A45 /* AppDelegate.swift in Sources */,
-				96C1398F246338DD00E0EEFC /* TwoUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

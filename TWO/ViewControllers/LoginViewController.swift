@@ -14,28 +14,19 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var logoView: UIImageView!
     
-    let emailField: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = "Email"
-        textfield.textColor = .white
-        textfield.textAlignment = .center
-        textfield.autocapitalizationType = .none
+    let emailField: InputFieldView = {
+        let textfield = InputFieldView(title: "Email", isSecure: false, autoCapType: .none)
         return textfield
     }()
     
-    let passwordField: UITextField = {
-        let textfield = UITextField()
-        textfield.placeholder = "Password"
-        textfield.textColor = .white
-        textfield.textAlignment = .center
-        textfield.autocapitalizationType = .none
-        textfield.isSecureTextEntry = true
+    let passwordField: InputFieldView = {
+        let textfield = InputFieldView(title: "Password", isSecure: true, autoCapType: .none)
         return textfield
     }()
     
     let loginButton: UIButton = {
         let button = UIButton()
-        button.layer.cornerRadius = 26
+        button.layer.cornerRadius = 20
         button.backgroundColor = Colors.appPrimaryColor
         button.setTitle("Login", for: .normal)
         button.setTitleColor(Colors.appBackgroundColor, for: .normal)
@@ -46,13 +37,23 @@ class LoginViewController: UIViewController {
     
     let signUpButton: UIButton = {
         let button = UIButton()
-        button.layer.cornerRadius = 26
+        button.layer.cornerRadius = 20
         button.layer.borderWidth = 1
         button.layer.borderColor = Colors.appPrimaryColor.cgColor
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(Colors.appPrimaryColor, for: .normal)
         button.titleLabel?.font = Font.Button.big
         button.addTarget(self, action: #selector(onSignUpButtonPress), for: .touchUpInside)
+        return button
+    }()
+    
+    let errorPropButton: UIButton = {
+        let button = UIButton()
+        button.isUserInteractionEnabled = false
+        button.layer.cornerRadius = 8
+        button.backgroundColor = Colors.error
+        button.setTitle("Invalid Login!", for: .normal)
+        button.titleLabel?.font = Font.infoMedReg
         return button
     }()
     
@@ -63,23 +64,35 @@ class LoginViewController: UIViewController {
     }
     
     @objc func onLoginButtonPress(sender: UIButton) {
-        let email = emailField.text ?? ""
-        let password = passwordField.text ?? ""
+        let spinner = SpinnerViewController()
+        let email = emailField.textField.text ?? ""
+        let password = passwordField.textField.text ?? ""
+        
+        self.addChildViewController(spinner)
+        spinner.view.frame = self.view.frame
+        self.view.addSubview(spinner.view)
+        spinner.didMove(toParentViewController: self)
+        
         Auth.auth().signIn(withEmail: email, password: password) { (res, err) in
+            spinner.willMove(toParentViewController: nil)
+            spinner.view.removeFromSuperview()
+            spinner.removeFromParentViewController()
             if err != nil {
-                print(err ?? "Error signing in")
+                print("Error signing in")
+                self.errorPropButton.alpha = 1
             } else {
                 self.navigationController?.pushViewController(FastViewController(), animated: true)
                 
                 
                 // Restore textfields
-                self.emailField.text = ""
-                self.passwordField.text = ""
+                self.emailField.textField.text = ""
+                self.passwordField.textField.text = ""
                 
                 UserDefaults.standard.set(true, forKey: kIsLoggedIn)
                 UserDefaults.standard.set(email, forKey: kUserEmail)
                 UserDefaults.standard.set(password, forKey: kUserPassword)
                 UserDefaults.standard.synchronize()
+                self.errorPropButton.alpha = 0
             }
         }
     }
@@ -88,7 +101,7 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(SignUpViewController(), animated: true)
         
         // Restore textfields
-        self.emailField.text = ""
-        self.passwordField.text = ""
+        self.emailField.textField.text = ""
+        self.passwordField.textField.text = ""
     }
 }
