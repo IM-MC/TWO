@@ -127,8 +127,8 @@ class SignUpViewController: UIViewController {
         let password = passwordField.textField.text ?? ""
         
         let data: [String: Any] = [
-            "first_name": firstName,
-            "last_name": lastName,
+            kdbFirstName: firstName,
+            kdbLastName: lastName,
             "email": email, // keep track in db, not needed in app
             "password": password, // keep track in db, not needed in app
             kdbIsFasting: false,
@@ -136,7 +136,8 @@ class SignUpViewController: UIViewController {
             kdbStartTime: Timestamp(date: Date()), // always replaced
             kdbFastsCompleted: 0,
             kdbLongestFast: 0,
-            "friends": [],
+            kdbFriends: [],
+            kdbProfileImg: "https://source.unsplash.com/random/100x100",
         ]
         
         db.collection("users").document(uid).setData(data) { err in

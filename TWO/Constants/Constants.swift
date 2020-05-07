@@ -19,6 +19,7 @@ struct Colors {
     static let shadowGreen = UIColor.init(red: 76/255, green: 255/255, blue: 67/255, alpha: 0.5)
     
     static let divider = UIColor.init(red: 151/255, green: 151/255, blue: 151/255, alpha: 1)
+    static let divet = UIColor.init(red: 216/255, green: 216/255, blue: 216/255, alpha: 0.23)
     
     struct InputField {
         static let dark = UIColor.init(red: 16/255, green: 16/255, blue: 16/255, alpha: 1)
@@ -28,6 +29,15 @@ struct Colors {
         static let selected = UIColor.init(red: 33/255, green: 203/255, blue: 97/255, alpha: 1)
         static let orangeBackground = UIColor.init(red: 216/255, green: 98/255, blue: 80/255, alpha: 1)
         static let disabled = UIColor.init(red: 156/255, green: 140/255, blue: 138/255, alpha: 1)
+    }
+    
+    struct Text {
+        static let subtle = UIColor.init(red: 145/255, green: 145/255, blue: 145/255, alpha: 1)
+        static let highlighted = UIColor.init(red: 223/255, green: 60/255, blue: 101/255, alpha: 1)
+    }
+    
+    struct Input {
+        static let background = UIColor.init(red: 24/255, green: 24/255, blue: 24/255, alpha: 1)
     }
     
 }
@@ -48,6 +58,7 @@ struct Font {
     static let title = UIFont(name: Text.Lato.Bold, size: 29)
     static let infoBig = UIFont(name: Text.Lato.Bold, size: 21)
     static let infoBigLight = UIFont(name: Text.Lato.Light, size: 21)
+    static let infoMed = UIFont(name: Text.Lato.Bold, size: 16)
     static let infoMedLight = UIFont(name: Text.Lato.Light, size: 16)
     static let infoSmall = UIFont(name: Text.Lato.Bold, size: 14)
     static let infoSmallLight = UIFont(name: Text.Lato.Light, size: 14)
@@ -74,11 +85,15 @@ let kFoodSelection = "foodSelected"
 let kIsLoggedIn = "isLoggedIn"
 
 // Datbase Keys
+let kdbFirstName = "first_name"
+let kdbLastName = "last_name"
 let kdbIsFasting = "is_fasting"
 let kdbFoodSelection = "food_selection"
 let kdbStartTime = "start_time"
 let kdbFastsCompleted = "completed_fasts"
 let kdbLongestFast = "longest_fast"
+let kdbFriends = "friends"
+let kdbProfileImg = "profile_pic"
 
 let kFoodValues = [
     0: FoodProp(title: "Popsicle Pwner", slogan: "cool as...", imageProgression: popsicleTransition)

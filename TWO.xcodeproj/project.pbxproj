@@ -29,9 +29,16 @@
 		967153A9245357DE00739A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967153A7245357DE00739A45 /* Main.storyboard */; };
 		967153AB245357E100739A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 967153AA245357E100739A45 /* Assets.xcassets */; };
 		967153AE245357E100739A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967153AC245357E100739A45 /* LaunchScreen.storyboard */; };
+		96A015742463A2200090027A /* AddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015732463A2200090027A /* AddFriendViewController.swift */; };
+		96A015762463A3A10090027A /* AddFriendPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015752463A3A10090027A /* AddFriendPrompt.swift */; };
+		96A015782463A6320090027A /* AddFriendPromptConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015772463A6320090027A /* AddFriendPromptConstraints.swift */; };
+		96A0157A2463AC380090027A /* AddFriendViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A015792463AC380090027A /* AddFriendViewControllerConstraints.swift */; };
 		96A9EEDE2454BF06000212AA /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */; };
 		96A9EEDF2454BF06000212AA /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDC2454BF06000212AA /* Lato-Light.ttf */; };
 		96A9EEE02454BF06000212AA /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */; };
+		96AB2C25246233F50075EE4B /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB2C24246233F50075EE4B /* FriendTableViewCell.swift */; };
+		96AB2C2B246238430075EE4B /* FriendTableViewCellConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB2C2A246238430075EE4B /* FriendTableViewCellConstraints.swift */; };
+		96C1398F246338DD00E0EEFC /* TwoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C1398E246338DD00E0EEFC /* TwoUser.swift */; };
 		96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FC24576E2D00A29464 /* Utilities.swift */; };
 		96CDF7002457817000A29464 /* LoginViewControllerConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CDF6FF2457817000A29464 /* LoginViewControllerConstraints.swift */; };
 		96CDF7022457834800A29464 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96CDF7012457834800A29464 /* GoogleService-Info.plist */; };
@@ -63,9 +70,16 @@
 		967153AA245357E100739A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		967153AD245357E100739A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		967153AF245357E100739A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A015732463A2200090027A /* AddFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewController.swift; sourceTree = "<group>"; };
+		96A015752463A3A10090027A /* AddFriendPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendPrompt.swift; sourceTree = "<group>"; };
+		96A015772463A6320090027A /* AddFriendPromptConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendPromptConstraints.swift; sourceTree = "<group>"; };
+		96A015792463AC380090027A /* AddFriendViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendViewControllerConstraints.swift; sourceTree = "<group>"; };
 		96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		96A9EEDC2454BF06000212AA /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		96A9EEDD2454BF06000212AA /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		96AB2C24246233F50075EE4B /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		96AB2C2A246238430075EE4B /* FriendTableViewCellConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCellConstraints.swift; sourceTree = "<group>"; };
+		96C1398E246338DD00E0EEFC /* TwoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoUser.swift; sourceTree = "<group>"; };
 		96CDF6FC24576E2D00A29464 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		96CDF6FF2457817000A29464 /* LoginViewControllerConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerConstraints.swift; sourceTree = "<group>"; };
 		96CDF7012457834800A29464 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -87,11 +101,8 @@
 		964F8EC624589FA6000C3A48 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				964F8EC724589FC4000C3A48 /* FastingView.swift */,
 				964F8ECE245A0015000C3A48 /* InputFieldView.swift */,
 				964F8ED0245A1990000C3A48 /* FoodSelection.swift */,
-				964ECB4F245B77EB00010E8B /* ConsumptionView.swift */,
-				964ECB53245DFF7C00010E8B /* FastInfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,11 +118,10 @@
 		965F90EE2456395A003AEE89 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				967153A5245357DE00739A45 /* FastViewController.swift */,
 				965F90EC24563952003AEE89 /* SignUpViewController.swift */,
 				965F90EF24563BDC003AEE89 /* LoginViewController.swift */,
 				964F8EC22457AD94000C3A48 /* NavViewController.swift */,
-				964ECB5724609B1D00010E8B /* FriendViewController.swift */,
+				96CDF6FE2457815400A29464 /* Constraints */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -141,7 +151,9 @@
 				96CDF6FB24576E1100A29464 /* Helpers */,
 				965F90EE2456395A003AEE89 /* ViewControllers */,
 				964F8EC624589FA6000C3A48 /* Views */,
-				96CDF6FE2457815400A29464 /* ViewConstraints */,
+				96AB2C26246235590075EE4B /* Fast */,
+				96AB2C28246237FC0075EE4B /* Friend */,
+				96C13990246338E600E0EEFC /* User */,
 				967153A3245357DE00739A45 /* AppDelegate.swift */,
 				96A9EEDB2454BF05000212AA /* Lato-Bold.ttf */,
 				96A9EEDC2454BF06000212AA /* Lato-Light.ttf */,
@@ -155,6 +167,60 @@
 			path = TWO;
 			sourceTree = "<group>";
 		};
+		96AB2C26246235590075EE4B /* Fast */ = {
+			isa = PBXGroup;
+			children = (
+				967153A5245357DE00739A45 /* FastViewController.swift */,
+				964F8EC724589FC4000C3A48 /* FastingView.swift */,
+				964ECB4F245B77EB00010E8B /* ConsumptionView.swift */,
+				964ECB53245DFF7C00010E8B /* FastInfoView.swift */,
+				96AB2C27246235B50075EE4B /* Constraints */,
+			);
+			path = Fast;
+			sourceTree = "<group>";
+		};
+		96AB2C27246235B50075EE4B /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				964F8ED2245B55BC000C3A48 /* FastViewControllerConstraints.swift */,
+				964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */,
+				964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */,
+				964ECB55245E005A00010E8B /* FastInfoViewConstraints.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		96AB2C28246237FC0075EE4B /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				96A015732463A2200090027A /* AddFriendViewController.swift */,
+				96A015752463A3A10090027A /* AddFriendPrompt.swift */,
+				964ECB5724609B1D00010E8B /* FriendViewController.swift */,
+				96AB2C24246233F50075EE4B /* FriendTableViewCell.swift */,
+				96AB2C292462382F0075EE4B /* Constraints */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		96AB2C292462382F0075EE4B /* Constraints */ = {
+			isa = PBXGroup;
+			children = (
+				964ECB592460A2DA00010E8B /* FriendViewControllerConstraints.swift */,
+				96AB2C2A246238430075EE4B /* FriendTableViewCellConstraints.swift */,
+				96A015772463A6320090027A /* AddFriendPromptConstraints.swift */,
+				96A015792463AC380090027A /* AddFriendViewControllerConstraints.swift */,
+			);
+			path = Constraints;
+			sourceTree = "<group>";
+		};
+		96C13990246338E600E0EEFC /* User */ = {
+			isa = PBXGroup;
+			children = (
+				96C1398E246338DD00E0EEFC /* TwoUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		96CDF6FB24576E1100A29464 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,18 +229,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		96CDF6FE2457815400A29464 /* ViewConstraints */ = {
+		96CDF6FE2457815400A29464 /* Constraints */ = {
 			isa = PBXGroup;
 			children = (
 				96CDF6FF2457817000A29464 /* LoginViewControllerConstraints.swift */,
-				964F8EC424589E6D000C3A48 /* FastingViewConstraints.swift */,
 				964F8ECC2459EC60000C3A48 /* SignUpViewControllerConstraints.swift */,
-				964F8ED2245B55BC000C3A48 /* FastViewControllerConstraints.swift */,
-				964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */,
-				964ECB55245E005A00010E8B /* FastInfoViewConstraints.swift */,
-				964ECB592460A2DA00010E8B /* FriendViewControllerConstraints.swift */,
 			);
-			path = ViewConstraints;
+			path = Constraints;
 			sourceTree = "<group>";
 		};
 		A8E07F94F6B752E457E1E47A /* Frameworks */ = {
@@ -313,12 +374,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A015742463A2200090027A /* AddFriendViewController.swift in Sources */,
 				964F8ED1245A1990000C3A48 /* FoodSelection.swift in Sources */,
 				964F8ED3245B55BC000C3A48 /* FastViewControllerConstraints.swift in Sources */,
+				96AB2C2B246238430075EE4B /* FriendTableViewCellConstraints.swift in Sources */,
+				96A0157A2463AC380090027A /* AddFriendViewControllerConstraints.swift in Sources */,
 				96CDF7002457817000A29464 /* LoginViewControllerConstraints.swift in Sources */,
 				964ECB5824609B1D00010E8B /* FriendViewController.swift in Sources */,
 				964F8ECD2459EC60000C3A48 /* SignUpViewControllerConstraints.swift in Sources */,
 				964F8ECF245A0015000C3A48 /* InputFieldView.swift in Sources */,
+				96A015782463A6320090027A /* AddFriendPromptConstraints.swift in Sources */,
+				96AB2C25246233F50075EE4B /* FriendTableViewCell.swift in Sources */,
 				964ECB56245E005A00010E8B /* FastInfoViewConstraints.swift in Sources */,
 				964ECB5A2460A2DA00010E8B /* FriendViewControllerConstraints.swift in Sources */,
 				964ECB50245B77EB00010E8B /* ConsumptionView.swift in Sources */,
@@ -329,10 +395,12 @@
 				964ECB52245B7D6600010E8B /* ConsumptionViewConstraints.swift in Sources */,
 				964F8ECB2458BA9F000C3A48 /* Constants.swift in Sources */,
 				967153A6245357DE00739A45 /* FastViewController.swift in Sources */,
+				96A015762463A3A10090027A /* AddFriendPrompt.swift in Sources */,
 				964ECB54245DFF7C00010E8B /* FastInfoView.swift in Sources */,
 				96CDF6FD24576E2D00A29464 /* Utilities.swift in Sources */,
 				964F8EC824589FC4000C3A48 /* FastingView.swift in Sources */,
 				967153A4245357DE00739A45 /* AppDelegate.swift in Sources */,
+				96C1398F246338DD00E0EEFC /* TwoUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

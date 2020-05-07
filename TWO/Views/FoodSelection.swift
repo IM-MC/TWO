@@ -16,6 +16,9 @@ class FoodSelection: UIButton {
         self.layer.cornerRadius = 16
         self.setImage(image, for: .normal)
         self.backgroundColor = .clear
+        
+        self.imageEdgeInsets = UIEdgeInsets(top: 18, left: 25, bottom: 18, right: 25)
+        
     }
     
     override init(frame: CGRect) {
