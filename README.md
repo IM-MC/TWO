@@ -17,6 +17,6 @@ The inspiration behind this app stemmed from the fact that doing activities with
 
 ![App Group](/Resources/app_group.png)
 
-Popsicle Progression (as time moves on, we continue through the progression)
+Popsicle Progression (as fasting progresses, we continue through these stages to display)
 
 ![Popsicle Progression](/Resources/popsicle_progression.png)
