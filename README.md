@@ -16,3 +16,7 @@ The inspiration behind this app stemmed from the fact that doing activities with
 ![Login Group](/Resources/login_group.png)
 
 ![App Group](/Resources/app_group.png)
+
+Popsicle Progression (as time moves on, we continue through the progression)
+
+![Popsicle Progression](/Resources/popsicle_progression.png)
