@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		513E4E9D1A1616EAEFFCEC96 /* Pods_TWO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */; };
+		960C265C2465D67700174851 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C265B2465D67700174851 /* UIViewControllerExtension.swift */; };
 		964ECB50245B77EB00010E8B /* ConsumptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB4F245B77EB00010E8B /* ConsumptionView.swift */; };
 		964ECB52245B7D6600010E8B /* ConsumptionViewConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */; };
 		964ECB54245DFF7C00010E8B /* FastInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964ECB53245DFF7C00010E8B /* FastInfoView.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		59FC4B089DF0B8BC65956B27 /* Pods-TWO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TWO.release.xcconfig"; path = "Target Support Files/Pods-TWO/Pods-TWO.release.xcconfig"; sourceTree = "<group>"; };
 		8CED5B966A8846CBBE102C65 /* Pods_TWO.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TWO.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		960C265B2465D67700174851 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		964ECB4F245B77EB00010E8B /* ConsumptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionView.swift; sourceTree = "<group>"; };
 		964ECB51245B7D6600010E8B /* ConsumptionViewConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionViewConstraints.swift; sourceTree = "<group>"; };
 		964ECB53245DFF7C00010E8B /* FastInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastInfoView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				96CDF6FC24576E2D00A29464 /* Utilities.swift */,
+				960C265B2465D67700174851 /* UIViewControllerExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				96A015782463A6320090027A /* AddFriendPromptConstraints.swift in Sources */,
 				96AB2C25246233F50075EE4B /* FriendTableViewCell.swift in Sources */,
 				964ECB56245E005A00010E8B /* FastInfoViewConstraints.swift in Sources */,
+				960C265C2465D67700174851 /* UIViewControllerExtension.swift in Sources */,
 				964ECB5A2460A2DA00010E8B /* FriendViewControllerConstraints.swift in Sources */,
 				964ECB50245B77EB00010E8B /* ConsumptionView.swift in Sources */,
 				964F8EC32457AD94000C3A48 /* NavViewController.swift in Sources */,

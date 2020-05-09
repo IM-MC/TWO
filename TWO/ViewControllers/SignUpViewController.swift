@@ -71,6 +71,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTapped()
         self.view.backgroundColor = UIColor.init(red: 26/255, green: 26/255, blue: 26/255, alpha: 1)
         
         popsicleSelection.addTarget(self, action: #selector(onFoodSelectionPress), for: .touchUpInside)

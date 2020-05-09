@@ -25,6 +25,7 @@ class AddFriendViewController: UIViewController {
     
     init(uid: String) {
         super.init(nibName: nil, bundle: nil)
+        self.hideKeyboardWhenTapped()
         self.uid = uid
         
         self.view.frame = CGRect(x: 0, y: -100, width: self.view.frame.width, height: self.view.frame.height)

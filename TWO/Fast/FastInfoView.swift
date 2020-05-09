@@ -123,12 +123,19 @@ class FastInfoView: UIView {
     func printAMPM(hour: Int, minute: Int) -> String{
         var meridiem = "AM"
         var nHours = hour
+        var nMinute = String(minute)
         if hour > 12 {
             nHours = hour - 12
             meridiem = "PM"
+        } else if nHours == 0 {
+            nHours = 12
         }
         
-        return ("\(nHours):\(minute) \(meridiem)")
+        if minute < 10 {
+            nMinute = "0\(minute)"
+        }
+        
+        return ("\(nHours):\(nMinute) \(meridiem)")
     }
     
     func secondsToTime(seconds: Int) -> (Int, Int) {

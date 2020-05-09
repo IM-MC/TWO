@@ -15,11 +15,14 @@ extension FriendTableViewCell {
         self.addSubview(nameLabel)
         self.addSubview(subtitleLabel)
         self.addSubview(fastCountLabel)
+        self.addSubview(timerImage)
+        timerImage.alpha = 0
         
         setupImg()
         setupName()
         setupSubtitle()
         setupFastCount()
+        setupTimer()
     }
     
     func setupImg() {
@@ -54,4 +57,11 @@ extension FriendTableViewCell {
         fastCountLabel.heightAnchor.constraint(equalToConstant: 19).isActive = true
     }
     
+    func setupTimer() {
+        timerImage.translatesAutoresizingMaskIntoConstraints = false
+        timerImage.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        timerImage.heightAnchor.constraint(equalToConstant: 27).isActive = true
+        timerImage.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        timerImage.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -20).isActive = true
+    }
 }

@@ -42,6 +42,11 @@ class FriendTableViewCell: UITableViewCell {
         return label
     }()
     
+    let timerImage: UIImageView = {
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "Timer"))
+        return imageView
+    }()
+    
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
@@ -74,8 +79,10 @@ class FriendTableViewCell: UITableViewCell {
                 var status = ""
                 if isFasting {
                     status = "fasting"
+                    self.timerImage.alpha = 1
                 } else {
                     status = "resting"
+                    self.timerImage.alpha = 0
                 }
                 
                 self.nameLabel.text = "\(firstName) \(lastName)"
